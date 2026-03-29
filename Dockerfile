@@ -12,9 +12,6 @@ RUN apt-get update \
     zip \
   && rm -rf /var/lib/apt/lists/*
 
-ARG OPENCLAW_VERSION=2026.3.28
-RUN npm install -g openclaw@v${OPENCLAW_VERSION}
-
 WORKDIR /app
 
 COPY package.json pnpm-lock.yaml ./
