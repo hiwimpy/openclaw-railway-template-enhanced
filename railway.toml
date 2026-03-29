@@ -1,5 +1,6 @@
 [build]
 builder = "dockerfile"
+buildArgs = { OPENCLAW_VERSION = "2026.3.24" }
 
 [deploy]
 healthcheckPath = "/setup/healthz"
