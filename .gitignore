@@ -18,3 +18,22 @@ src_ref
 .claude/
 .serena/
 .tmpdata/
+
+# --- OpenClaw / Railway runtime data ---
+data/
+data/**
+
+# --- Sessions / logs ---
+*.jsonl
+*.jsonl.*
+*.log
+
+# --- Temp / cache ---
+tmp/
+cache/
+logs/
+
+# --- Python ---
+.venv/
+__pycache__/
+*.pyc
