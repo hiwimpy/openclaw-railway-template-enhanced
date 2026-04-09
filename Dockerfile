@@ -4,9 +4,11 @@ RUN apt-get update \
   && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
     ca-certificates \
     curl \
+    gh \
     git \
     gosu \
     procps \
+    pip \
     python3 \
     build-essential \
     zip \
