@@ -38,6 +38,10 @@ ENV HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew"
 ENV HOMEBREW_CELLAR="/home/linuxbrew/.linuxbrew/Cellar"
 ENV HOMEBREW_REPOSITORY="/home/linuxbrew/.linuxbrew/Homebrew"
 
+ARG OPENCLAW_VERSION
+ENV OPENCLAW_VERSION=${OPENCLAW_VERSION}
+RUN npm install -g openclaw@v${OPENCLAW_VERSION}
+
 ENV PORT=8080
 ENV OPENCLAW_ENTRY=/usr/local/lib/node_modules/openclaw/dist/entry.js
 EXPOSE 8080
