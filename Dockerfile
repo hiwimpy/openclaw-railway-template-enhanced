@@ -40,7 +40,9 @@ ENV HOMEBREW_REPOSITORY="/home/linuxbrew/.linuxbrew/Homebrew"
 
 ARG OPENCLAW_VERSION
 ENV OPENCLAW_VERSION=${OPENCLAW_VERSION}
+USER root
 RUN npm install -g openclaw@v${OPENCLAW_VERSION}
+USER openclaw
 
 ENV PORT=8080
 ENV OPENCLAW_ENTRY=/usr/local/lib/node_modules/openclaw/dist/entry.js
